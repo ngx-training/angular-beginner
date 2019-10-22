@@ -1,12 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-interface User {
-  name: string;
-  position: string;
-  salary?: number;
-  hobbies: string[];
-  canSpeakEnglish: boolean;
-}
+import { User } from '../interfaces/user.interface';
 
 @Component({
   selector: 'app-test',
