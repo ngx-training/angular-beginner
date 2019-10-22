@@ -8,9 +8,18 @@ import { User } from '../interfaces/user.interface';
 })
 export class UserCardComponent implements OnInit {
 
+  private _description: string
+
   @Input() user: User;
 
-  @Input() description: string = 'Hier soll die Beschreibung stehen';
+  @Input()
+  set description(value: string) {
+    this._description = value.toUpperCase();
+  }
+
+  get description(): string {
+    return this._description;
+  }
 
   constructor() { }
 
