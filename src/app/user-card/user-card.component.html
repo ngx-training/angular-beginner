@@ -3,6 +3,12 @@
   <mat-card-content>
     <p>{{ user.position }}</p>
     <p>{{ user.salary | currency:'EUR' }}</p>
-    <p>{{ description }}</p>
+    <p>
+      <input type="text" name="description" [(ngModel)]="description" />
+    </p>
+    <select name="status" #select (change)="sendStatus(select.value)">
+      <option value="true">Beschäftigt</option>
+      <option value="false">Nicht beschäftigt</option>
+    </select>
   </mat-card-content>
 </mat-card>

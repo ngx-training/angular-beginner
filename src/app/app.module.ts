@@ -11,6 +11,7 @@ import { MatCardModule } from '@angular/material/card';
 import { TestComponent } from './test/test.component';
 import { UserCardComponent } from './user-card/user-card.component';
 import { UsersComponent } from './users/users.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { UsersComponent } from './users/users.component';
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges, Output, EventEmitter } from '@angular/core';
 import { User } from '../interfaces/user.interface';
 
 @Component({
@@ -6,7 +6,7 @@ import { User } from '../interfaces/user.interface';
   templateUrl: './user-card.component.html',
   styleUrls: ['./user-card.component.scss']
 })
-export class UserCardComponent implements OnInit {
+export class UserCardComponent implements OnInit, OnChanges {
 
   private _description: string
 
@@ -14,16 +14,29 @@ export class UserCardComponent implements OnInit {
 
   @Input()
   set description(value: string) {
-    this._description = value.toUpperCase();
+    this._description = value;
+    this.descriptionChange.emit(this._description);
   }
 
   get description(): string {
     return this._description;
   }
 
+  @Output() statusEvent = new EventEmitter<boolean>();
+
+  @Output() descriptionChange = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    console.log(changes);
+  }
+
+  sendStatus(status: boolean) {
+    this.statusEvent.emit(status);
   }
 
 }

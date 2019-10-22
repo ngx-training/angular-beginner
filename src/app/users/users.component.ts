@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
 import { User } from '../interfaces/user.interface';
+import { UserCardComponent } from '../user-card/user-card.component';
 
 @Component({
   selector: 'app-users',
@@ -25,9 +26,23 @@ export class UsersComponent implements OnInit {
     }
   ];
 
+  statusChanged: boolean;
+
+  parentDescription = 'Init description';
+
+  @ViewChild('userCard', { static: false }) userCard: UserCardComponent;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  readStatusEvent(value: boolean) {
+    this.statusChanged = value;
+  }
+
+  triggerDescription() {
+    this.userCard.description = 'Changed from parents TypeScript code';
   }
 
 }
