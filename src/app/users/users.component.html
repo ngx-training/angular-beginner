@@ -7,4 +7,8 @@
 <app-user-card *ngFor="let user of users"
                [user]="user"
                (statusEvent)="readStatusEvent($event)"
-               [(description)]="parentDescription"></app-user-card>
+               [(description)]="parentDescription">
+              <h1>Hier ein Titel!</h1>
+              <p class="inner-text">Dieser Text soll erschein</p>
+              <button>Ich bin Button</button>
+            </app-user-card>

@@ -12,4 +12,9 @@
     </select>
     <button (click)="sendMessage()">Send Message</button>
   </mat-card-content>
+  <mat-card-footer>
+    <ng-content select=".inner-text"></ng-content>
+    <hr>
+    <ng-content select="button"></ng-content>
+  </mat-card-footer>
 </mat-card>
