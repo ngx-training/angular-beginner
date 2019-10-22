@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges, Output, EventEmitter } from '@angular/core';
 import { User } from '../interfaces/user.interface';
+import { MessageService } from '../services/message.service';
 
 @Component({
   selector: 'app-user-card',
@@ -26,7 +27,7 @@ export class UserCardComponent implements OnInit, OnChanges {
 
   @Output() descriptionChange = new EventEmitter<string>();
 
-  constructor() { }
+  constructor(private messageService: MessageService) { }
 
   ngOnInit() {
   }
@@ -37,6 +38,10 @@ export class UserCardComponent implements OnInit, OnChanges {
 
   sendStatus(status: boolean) {
     this.statusEvent.emit(status);
+  }
+
+  sendMessage() {
+    this.messageService.sendMessage('Message from user card');
   }
 
 }

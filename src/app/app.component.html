@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
   <mat-icon (click)="sideNav.toggle()">{{ sideNav.opened ? 'menu_open' : 'menu' }}</mat-icon>
-  <span class="toolbar-title">EffCom AG</span>
+  <span class="toolbar-title">EffCom AG: {{ message }}</span>
 </mat-toolbar>
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #sideNav mode="side" class="sidenav">
@@ -11,5 +11,5 @@
   </mat-sidenav-content>
 </mat-sidenav-container>
 <mat-toolbar class="footer" color="primary">
-  <span>&copy; 2019</span>
+  <span>&copy; 2019: {{ message$ | async }}</span>
 </mat-toolbar>
