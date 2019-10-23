@@ -1,1 +1,10 @@
-<p>news-list works!</p>
+<h1>News List</h1>
+<ng-container *ngIf="news && news.length !== 0; else noNewsList">
+  <mat-card *ngFor="let newsItem of news">
+    <p>{{ newsItem.title }}</p>
+  </mat-card>
+</ng-container>
+
+<ng-template #noNewsList>
+  <p>Es gibt keine News!</p>
+</ng-template>

@@ -17,6 +17,7 @@ import { NewsComponent } from './news/news.component';
 import { NewsListComponent } from './news/news-list/news-list.component';
 import { NewsDetailComponent } from './news/news-detail/news-detail.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { NavigationComponent } from './navigation/navigation.component';
     MatIconModule,
     MatCardModule,
     FormsModule,
-    MatListModule
+    MatListModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
