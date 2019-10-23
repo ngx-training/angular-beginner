@@ -15,6 +15,7 @@ export class UsersEditComponent implements OnInit {
   userId: string;
   userForm: FormGroup;
   user: DataUser;
+  props: string[];
 
   constructor(private activatedRoute: ActivatedRoute,
               private userService: UserService,
@@ -23,6 +24,7 @@ export class UsersEditComponent implements OnInit {
 
   ngOnInit() {
     this.createForm();
+    this.props = Object.keys(this.userForm.controls);
     this.activatedRoute.params.subscribe(params => {
       if (params.id) {
         this.userId = params.id;

@@ -1,7 +1,11 @@
 <h1>{{ userId === 'new' ? 'Create user' : 'Edit user' }}</h1>
 <div class="form-container">
   <form [formGroup]="userForm" (ngSubmit)="submit(userForm)">
-    <mat-form-field>
+
+    <mat-form-field *ngFor="let prop of props">
+      <input matInput [placeholder]="prop.toUpperCase()" [formControlName]="prop">
+    </mat-form-field>
+<!--<mat-form-field>
       <input matInput placeholder="Title" formControlName="title">
     </mat-form-field>
     <mat-form-field>
@@ -34,6 +38,7 @@
     <mat-form-field>
       <input matInput placeholder="Company" formControlName="company">
     </mat-form-field>
+  -->
     <div>
       <button mat-raised-button color="primary">Save</button>
     </div>
