@@ -25,6 +25,7 @@ import { NewsEditComponent } from './news/news-edit/news-edit.component';
 import { UsersListComponent } from './users/users-list/users-list.component';
 import { UsersEditComponent } from './users/users-edit/users-edit.component';
 import { UsersDetailComponent } from './users/users-detail/users-detail.component';
+import { FontChangerDirective } from './directives/font-changer.directive';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { UsersDetailComponent } from './users/users-detail/users-detail.componen
     NewsEditComponent,
     UsersListComponent,
     UsersEditComponent,
-    UsersDetailComponent
+    UsersDetailComponent,
+    FontChangerDirective
   ],
   imports: [
     BrowserModule,
