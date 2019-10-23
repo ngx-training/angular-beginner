@@ -4,6 +4,7 @@ import { UsersComponent } from './users/users.component';
 import { NewsComponent } from './news/news.component';
 import { NewsListComponent } from './news/news-list/news-list.component';
 import { NewsDetailComponent } from './news/news-detail/news-detail.component';
+import { NewsEditComponent } from './news/news-edit/news-edit.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,10 @@ const routes: Routes = [
       {
         path: ':id',
         component: NewsDetailComponent
+      },
+      {
+        path: 'edit/:id',
+        component: NewsEditComponent
       }
     ]
   },

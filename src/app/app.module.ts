@@ -9,6 +9,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
 import { TestComponent } from './test/test.component';
 import { UserCardComponent } from './user-card/user-card.component';
 import { UsersComponent } from './users/users.component';
@@ -18,6 +19,7 @@ import { NewsListComponent } from './news/news-list/news-list.component';
 import { NewsDetailComponent } from './news/news-detail/news-detail.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NewsEditComponent } from './news/news-edit/news-edit.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     NewsComponent,
     NewsListComponent,
     NewsDetailComponent,
-    NavigationComponent
+    NavigationComponent,
+    NewsEditComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     FormsModule,
     MatListModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

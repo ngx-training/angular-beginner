@@ -1,7 +1,15 @@
 <h1>News List</h1>
+<button mat-raised-button color="primary" routerLink="edit/new">Create News</button>
 <ng-container *ngIf="news && news.length !== 0; else noNewsList">
   <mat-card *ngFor="let newsItem of news">
-    <a [routerLink]="newsItem.id">{{ newsItem.title }}</a>
+    <mat-card-content>
+      {{ newsItem.title }}
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-stroked-button color="primary" [routerLink]="newsItem.id">Detail</button>
+      <button mat-stroked-button color="accent" [routerLink]="'edit/' + newsItem.id">Edit</button>
+      <button mat-flat-button color="warn" (click)="deleteNewsItem(newsItem.id)">Delete</button>
+    </mat-card-actions>
   </mat-card>
 </ng-container>
 

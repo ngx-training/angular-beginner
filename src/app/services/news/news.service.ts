@@ -21,4 +21,9 @@ export class NewsService {
     const endpoint = this.newsUrl + '/' + id;
     return this.httpClient.get<News>(endpoint);
   }
+
+  deleteNews(id: string): Observable<unknown> {
+    const endpoint = this.newsUrl + '/' + id;
+    return this.httpClient.delete(endpoint);
+  }
 }

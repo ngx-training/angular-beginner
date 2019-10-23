@@ -25,4 +25,13 @@ export class NewsListComponent implements OnInit {
     });
   }
 
+  deleteNewsItem(id: string) {
+    this.newsService.deleteNews(id).subscribe(_ => {
+      console.log(id, ' deleted');
+      this.loadNews();
+    }, error => {
+      console.error(error);
+    });
+  }
+
 }
