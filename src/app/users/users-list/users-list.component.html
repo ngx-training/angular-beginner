@@ -1,0 +1,17 @@
+<h1>User List</h1>
+<div class="user-list">
+    <mat-card *ngFor="let user of users$ | async">
+        <mat-card-title>{{ user.title }} {{ user.firstname + ' ' + user.lastname }}</mat-card-title>
+        <mat-card-content>
+          <strong>City:</strong> {{ user.city }}<br>
+          <strong>Company:</strong> {{ user.company }}<br>
+          <strong>Phone:</strong> {{ user.phone }}<br>
+          <strong>E-Mail:</strong> {{ user.email }}
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-stroked-button [routerLink]="user.id">Detail</button>
+          <button mat-stroked-button [routerLink]="'edit/' + user.id">Edit</button>
+          <button mat-stroked-button (click)="deleteUser(user.id)">Delete</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

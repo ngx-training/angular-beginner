@@ -1,0 +1,9 @@
+.user-list {
+  display: flex;
+  flex-flow: row wrap;
+
+  mat-card {
+    width: 27%;
+    margin: .5em;
+  }
+}

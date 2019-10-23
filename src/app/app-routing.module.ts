@@ -5,6 +5,9 @@ import { NewsComponent } from './news/news.component';
 import { NewsListComponent } from './news/news-list/news-list.component';
 import { NewsDetailComponent } from './news/news-detail/news-detail.component';
 import { NewsEditComponent } from './news/news-edit/news-edit.component';
+import { UsersListComponent } from './users/users-list/users-list.component';
+import { UsersDetailComponent } from './users/users-detail/users-detail.component';
+import { UsersEditComponent } from './users/users-edit/users-edit.component';
 
 
 const routes: Routes = [
@@ -33,7 +36,21 @@ const routes: Routes = [
   },
   {
     path: 'users',
-    component: UsersComponent
+    component: UsersComponent,
+    children: [
+      {
+        path: '',
+        component: UsersListComponent
+      },
+      {
+        path: ':id',
+        component: UsersDetailComponent
+      },
+      {
+        path: 'edit/:id',
+        component: UsersEditComponent
+      }
+    ]
   },
   {
     path: '**',

@@ -22,6 +22,9 @@ import { NewsDetailComponent } from './news/news-detail/news-detail.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NewsEditComponent } from './news/news-edit/news-edit.component';
+import { UsersListComponent } from './users/users-list/users-list.component';
+import { UsersEditComponent } from './users/users-edit/users-edit.component';
+import { UsersDetailComponent } from './users/users-detail/users-detail.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { NewsEditComponent } from './news/news-edit/news-edit.component';
     NewsListComponent,
     NewsDetailComponent,
     NavigationComponent,
-    NewsEditComponent
+    NewsEditComponent,
+    UsersListComponent,
+    UsersEditComponent,
+    UsersDetailComponent
   ],
   imports: [
     BrowserModule,
