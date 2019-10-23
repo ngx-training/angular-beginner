@@ -13,6 +13,7 @@ import { Location } from '@angular/common';
 export class NewsEditComponent implements OnInit {
 
   newsId: string;
+  currentDate = Date.now().toString();
 
   news: News;
   newsFormGroup: FormGroup;
@@ -62,7 +63,23 @@ export class NewsEditComponent implements OnInit {
   }
 
   submit(form: FormGroup) {
-
+    const formValue: News = form.value;
+    formValue.created_at = this.currentDate;
+    if (this.newsId === 'new') {
+      this.newsService.createNews(formValue).subscribe(_ => {
+        console.log('new news creted');
+        this.cancel();
+      }, error => {
+        console.error(error);
+      });
+    } else {
+      this.newsService.updateNews(this.newsId, formValue).subscribe(data => {
+        this.news = data;
+        this.fillForm();
+      }, error => {
+        console.error(error);
+      });
+    }
   }
 
   cancel() {
