@@ -26,6 +26,7 @@ import { UsersListComponent } from './users/users-list/users-list.component';
 import { UsersEditComponent } from './users/users-edit/users-edit.component';
 import { UsersDetailComponent } from './users/users-detail/users-detail.component';
 import { FontChangerDirective } from './directives/font-changer.directive';
+import { FunnyPipe } from './pipes/funny.pipe';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { FontChangerDirective } from './directives/font-changer.directive';
     UsersListComponent,
     UsersEditComponent,
     UsersDetailComponent,
-    FontChangerDirective
+    FontChangerDirective,
+    FunnyPipe
   ],
   imports: [
     BrowserModule,
