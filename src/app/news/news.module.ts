@@ -6,6 +6,7 @@ import { NewsDetailComponent } from './news-detail/news-detail.component';
 import { NewsEditComponent } from './news-edit/news-edit.component';
 import { NewsRoutingModule } from './news-routing.module';
 import { UiModule } from '../ui/ui.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { UiModule } from '../ui/ui.module';
   imports: [
     CommonModule,
     UiModule,
-    NewsRoutingModule
+    NewsRoutingModule,
+    TranslateModule
   ]
 })
 export class NewsModule { }

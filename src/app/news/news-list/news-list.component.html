@@ -1,4 +1,4 @@
-<h1 appFontChanger fontColor="red">News List</h1>
+<h1 appFontChanger fontColor="red">{{ 'newsList' | translate }}</h1>
 <button mat-raised-button color="primary" routerLink="edit/new">Create News</button>
 <ng-container *ngIf="news && news.length !== 0; else noNewsList">
   <mat-card *ngFor="let newsItem of news">

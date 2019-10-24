@@ -7,7 +7,7 @@ import { NewsEditComponent } from './news-edit/news-edit.component';
 
 const routes: Routes = [
   {
-    path: 'news',
+    path: '',
     component: NewsComponent,
     children: [
       {
