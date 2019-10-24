@@ -26,10 +26,7 @@ import { UsersListComponent } from './users/users-list/users-list.component';
 import { UsersEditComponent } from './users/users-edit/users-edit.component';
 import { UsersDetailComponent } from './users/users-detail/users-detail.component';
 import { FontChangerDirective } from './directives/font-changer.directive';
-<<<<<<< HEAD
 import { FirstDirectiveDirective } from './directives/first-directive.directive';
-=======
->>>>>>> pipe
 import { FunnyPipe } from './pipes/funny.pipe';
 
 @NgModule({
