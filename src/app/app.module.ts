@@ -4,33 +4,18 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
-import { MatCardModule } from '@angular/material/card';
-import { MatListModule } from '@angular/material/list';
-import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSelectModule } from '@angular/material/select';
 import { TestComponent } from './test/test.component';
 import { UserCardComponent } from './user-card/user-card.component';
 import { UsersComponent } from './users/users.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NewsComponent } from './news/news.component';
-import { NewsListComponent } from './news/news-list/news-list.component';
-import { NewsDetailComponent } from './news/news-detail/news-detail.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { NewsEditComponent } from './news/news-edit/news-edit.component';
 import { UsersListComponent } from './users/users-list/users-list.component';
 import { UsersEditComponent } from './users/users-edit/users-edit.component';
 import { UsersDetailComponent } from './users/users-detail/users-detail.component';
-import { FontChangerDirective } from './directives/font-changer.directive';
-import { FirstDirectiveDirective } from './directives/first-directive.directive';
-import { FunnyPipe } from './pipes/funny.pipe';
 import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { UiModule } from './ui/ui.module';
+import { NewsModule } from './news/news.module';
 
 export function createTranslateLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -42,34 +27,18 @@ export function createTranslateLoaderFactory(http: HttpClient) {
     TestComponent,
     UserCardComponent,
     UsersComponent,
-    NewsComponent,
-    NewsListComponent,
-    NewsDetailComponent,
     NavigationComponent,
-    NewsEditComponent,
     UsersListComponent,
     UsersEditComponent,
-    UsersDetailComponent,
-    FontChangerDirective,
-    FirstDirectiveDirective,
-    FunnyPipe
+    UsersDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatCardModule,
-    FormsModule,
-    MatListModule,
     HttpClientModule,
-    MatButtonModule,
-    ReactiveFormsModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatSelectModule,
+    UiModule,
+    NewsModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
