@@ -1,4 +1,4 @@
-<h1 appFirstDirective fontColor="red">User List</h1>
+<h1 appFirstDirective fontColor="red">{{ 'userList' | translate }}</h1>
 <div class="user-list">
     <mat-card *ngFor="let user of users$ | async">
         <mat-card-title>{{ user.title }} {{ user.firstname + ' ' + user.lastname }}</mat-card-title>
