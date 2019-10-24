@@ -5,8 +5,19 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FunnyPipe implements PipeTransform {
 
-  transform(value: any, ...args: any[]): any {
-    return null;
+  transform(value: string): string {
+    if (value) {
+      const strArr = [...value];
+      strArr.forEach((letter, index) => {
+        if (index % 2 === 0) {
+          strArr[index] = letter.toUpperCase();
+        } else {
+          strArr[index] = letter;
+        }
+      });
+      value = strArr.join('');
+    }
+    return value;
   }
 
 }
