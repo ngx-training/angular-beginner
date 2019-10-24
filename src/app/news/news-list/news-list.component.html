@@ -3,7 +3,7 @@
 <ng-container *ngIf="news && news.length !== 0; else noNewsList">
   <mat-card *ngFor="let newsItem of news">
     <mat-card-content>
-      {{ newsItem.title | funny }}
+      {{ newsItem.title }}
     </mat-card-content>
     <mat-card-actions>
       <button mat-stroked-button color="primary" [routerLink]="newsItem.id">Detail</button>
