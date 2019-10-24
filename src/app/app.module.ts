@@ -27,6 +27,7 @@ import { UsersEditComponent } from './users/users-edit/users-edit.component';
 import { UsersDetailComponent } from './users/users-detail/users-detail.component';
 import { FontChangerDirective } from './directives/font-changer.directive';
 import { FirstDirectiveDirective } from './directives/first-directive.directive';
+import { FunnyPipe } from './pipes/funny.pipe';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { FirstDirectiveDirective } from './directives/first-directive.directive'
     UsersEditComponent,
     UsersDetailComponent,
     FontChangerDirective,
-    FirstDirectiveDirective
+    FirstDirectiveDirective,
+    FunnyPipe
   ],
   imports: [
     BrowserModule,
